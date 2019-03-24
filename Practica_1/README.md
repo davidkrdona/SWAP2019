@@ -17,17 +17,22 @@ acceso por SSH entre ambas máquinas).*
 -------
 
 ### Maquina A
-IP: 172.16.146.131
+**IP:** 172.16.146.131
+<br>
+
 ![machineA](./img/machine_ip_a.png)
 
 
 ### Maquina B
-IP: 172.16.146.132
+**IP:** 172.16.146.132
+<br>
+
 ![machineB](./img/machine_ip_b.png)
 
 
 ## Conexiones SSH
 Para acceder a una máquina por medio de *SSH*  basta con conocer su dirección IP y credenciales de acceso.
+<br>
 Conexión `ssh <user>@<ip>`
 
 ### SSH Maquina A a maquina B
