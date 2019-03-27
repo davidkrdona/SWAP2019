@@ -5,7 +5,7 @@
 Los objetivos concretos de esta segunda práctica son:
 <br>
 - Aprender a copiar archivos mediante ssh
-  - Clonar contenido entre máquinas
+- Clonar contenido entre máquinas
 - Configurar el ssh para acceder a máquinas remotas sin contraseña
 - establecer tareas en cron
 
@@ -26,7 +26,8 @@ esto lo realizamo con el siguiente comando:
 
 
 ##### Maquina B con data de Maquina A
-
+Hemos cambiado los permisos por medio de `sudo chown david:david -R /var/www
+`
 ![ssh_a_b](./img/machine_b_sent.png)
 
 ### Rsync
@@ -37,7 +38,8 @@ Vamos a clonar una carpeta cualquiera, primero tuvimos que cambiar el dueño de 
 ![ssh_a_b](./img/a.png)
 
 ##### Maquina B con data de Maquina A
+Luego ejecutamos el comando: `rsync -avz -e ssh david@172.16.146.131:/var/www/ /var/www/` y observamos como realiza la copia los ficheros dentro de la carpeta /var/www.
 
 ![ssh_a_b](./img/b.png)
 
-Como podemos ver se ha copiado la carpeta exitosamente
+Como podemos ver se ha copiado la carpeta sin ningún fallo.
