@@ -30,7 +30,7 @@ Hemos cambiado los permisos por medio de `sudo chown david:david -R /var/www
 `
 ![ssh_a_b](./img/machine_b_sent.png)
 
-### Rsync
+### Rsync (Clonar contenido entre máquinas)
 Vamos a clonar una carpeta cualquiera, primero tuvimos que cambiar el dueño de la carpeta por medio de este comando:
 `sudo chown david:david /var/www`
 
@@ -43,3 +43,19 @@ Luego ejecutamos el comando: `rsync -avz -e ssh david@172.16.146.131:/var/www/ /
 ![ssh_a_b](./img/b.png)
 
 Como podemos ver se ha copiado la carpeta sin ningún fallo.
+
+### Configurar el ssh para acceder a máquinas remotas sin contraseña
+Primero  generamos las llaves pública y privada de una de nuestras máquinas, en este caso maquinaA.
+
+##### Generación de clave y copia  Maquina A
+Generación `ssh-keygen -b 4096 -t rsa` sin passphrase.
+![ssh_a_b](./img/ssh_gen.png)
+<br>
+Copia: `ssh-copy-id 172.16.146.132`
+![ssh_a_b](./img/ss_copy.png)
+
+##### Configuración ssh Maquina B
+Hemos añadido la clave y cambiado los permisos por medio de `chmod 600 ~/.ssh/authorized_keys`.
+![ssh_a_b](./img/chmod.png)
+
+Para las futuras conexiones ya no hace falta, introducir la contraseña.
