@@ -105,10 +105,12 @@ Ahora si podemos acceder por medio de http:
     iptables -A OUTPUT -p tcp --sport 443 -j ACCEPT
 
 Ahora si podemos acceder por medio de https:
+<br>
   ![https](./img/https.png)
 
 
 Como podemos la configuración esta completa,
+<br>
   ![iptables](./img/iptables.png)
 
 ahora se otorgan permisos al script para añadirse al inicio de SO para que se ejecuté y configure las iptables.
