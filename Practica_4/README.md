@@ -98,7 +98,8 @@ Teniendo en cuenta el script del guión de prácticas, he realizado los 3 primer
     iptables -A OUTPUT -p tcp --sport 80 -j ACCEPT
 
 Ahora si podemos acceder por medio de http:
-![http](./img/http.png)
+<br>
+    ![http](./img/http.png)
 
     # (6) Abrir los puertos HTTP (443) de servidor web
     iptables -A INPUT -p tcp --dport 443 -j ACCEPT
